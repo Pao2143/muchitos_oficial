@@ -1,0 +1,208 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #ffffff;
+    color: #ff00ae;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    color: #ff00bb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+.socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.socials a {
+    display: inline-block;
+}
+
+.social-icon {
+    width: 30px;  /* Ajusta el tamaño según lo necesites */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Efecto de ampliación al pasar el ratón */
+}
+.socials a {
+    color: #ff00ae;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+h1, h2 {
+    color: #ff00ae;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.carousel img {
+    width: 40%;
+    height: auto;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.add-to-cart {
+    background-color: #ff00ae;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #ff00ae;
+}
+
+form {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ff00ae;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #ff00ae;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #ff00ae;
+}
+
+#carrito {
+    margin-top: 2rem;
+}
+
+#cart-items {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+footer {
+    text-align: center;
+    background-color: #ff00ae;
+    color: #fff;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+#dynamic-logo {
+    width: 200px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem; /* Centrar y agregar espacio */
+}
+.hidden {
+    display: none;
+}
+
+#metodo-pago {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    width: 50%;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Interactiva</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    <header>
+        <img id="dynamic-logo" src="logo.png" alt="Logo dinámico">
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="bolsas.html">Bolsas</a></li>
+                <li><a href="pines.html">Pines</a></li>
+                <li><a href="stickers.html">Stickers</a></li>
+            </ul>
+            <div class="socials">
+                <a href="https://www.instagram.com/losmuchitos_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                    <img src="IN.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="F.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://wa.me" target="_blank">
+                    <img src="WH.png" alt="WhatsApp" class="social-icon">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="productos">
+            <h2>Playeras</h2>
+            <div class="carousel-container">
+                <button class="carousel-btn prev">❮</button>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="Copia de 01.png" alt="Tote Bag 1">
+                        <h3>Playera Kendrick Lamar</h3>
+                        <p>$249</p>
+                        <button class="add-to-cart">Agregar al carrito</button>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Copia de 02 3.png" alt="Tote Bag 2">
+                        <h3>Playera CAS</h3>
+                        <p>$249</p>
+                        <button class="add-to-cart">Agregar al carrito</button>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Copia de 03.png" alt="Tote Bag 2">
+                        <h3>Playera Killer Combo</h3>
+                        <p>$249</p>
+                        <button class="add-to-cart">Agregar al carrito</button>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Copia de 04.png" alt="Tote Bag 2">
+                        <h3>Playera Sade</h3>
+                        <p>$249</p>
+                        <button class="add-to-cart">Agregar al carrito</button>
+                    </div>
+                    <!-- Agrega más elementos aquí -->
+                </div>
+                <button class="carousel-btn next">❯</button>
+            </div>
+        </section>
+                <!-- Más elementos del carrusel -->
+            </div>
+        </section>
+
+        <section id="formulario">
+            <form id="pedido-form" action="#" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            
+                <label for="producto">Producto:</label>
+                <select id="producto" name="producto">
+                    <option value="playera">Playera</option>
+                    <option value="bolsa">Bolsa</option>
+                    <option value="pin">Pin</option>
+                    <option value="sticker">Sticker</option>
+                </select>
+            
+                <label for="mensaje">Detalles del pedido:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            
+                <button type="submit">Enviar Pedido</button>
+            </form>
+            <div id="confirmacion" style="display: none; color: rgb(255, 0, 157); font-weight: bold;">
+                ¡Tu pedido ha sido enviado con éxito!
+            </div>
+            </form>
+        </section>
+        
+
+        <section id="carrito">
+            <h2>Carrito de Compras</h2>
+            <div id="cart-items"></div>
+            <p>Total: $<span id="total-cost">0.00</span></p>
+            <button id="checkout">Finalizar Compra</button>
+        </section>
+
+        <section id="metodo-pago" class="hidden">
+            <h2>Selecciona tu Método de Pago</h2>
+            <form id="form-pago">
+                <label>
+                    <input type="radio" name="pago" value="tarjeta" required> Tarjeta de Crédito/Débito
+                </label><br>
+                <label>
+                    <input type="radio" name="pago" value="paypal"> PayPal
+                </label><br>
+                <label>
+                    <input type="radio" name="pago" value="oxxo"> OXXO
+                </label><br>
+                <button type="submit">Pagar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tienda Los Muchitos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
