@@ -21,11 +21,8 @@
                 <a href="https://www.instagram.com/losmuchitos_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
                     <img src="IN.png" alt="Instagram" class="social-icon">
                 </a>
-                <a href="https://www.facebook.com" target="_blank">
-                    <img src="F.png" alt="Facebook" class="social-icon">
-                </a>
-                <a href="https://wa.me" target="_blank">
-                    <img src="WH.png" alt="WhatsApp" class="social-icon">
+                <a href="https://www.tiktok.com/@losmuchitos_oficial?_t=ZS-8wUbh0pbray&_r=1" target="_blank">
+                    <img src="Tik.png" alt="TikTok" class="social-icon">
                 </a>
             </div>
         </nav>
@@ -71,28 +68,32 @@
         </section>
 
         <section id="formulario">
-            <form id="pedido-form" action="#" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
             
-                <label for="producto">Producto:</label>
-                <select id="producto" name="producto">
-                    <option value="playera">Playera</option>
-                    <option value="bolsa">Bolsa</option>
-                    <option value="pin">Pin</option>
-                    <option value="sticker">Sticker</option>
-                </select>
-            
-                <label for="mensaje">Detalles del pedido:</label>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-            
-                <button type="submit">Enviar Pedido</button>
-            </form>
-            <div id="confirmacion" style="display: none; color: rgb(255, 0, 157); font-weight: bold;">
-                ¡Tu pedido ha sido enviado con éxito!
-            </div>
-            </form>
-        </section>
+<form action="https://formsubmit.co/el/toboco" method="POST" id="pedido-form">
+    <input type="text" name="nombre" placeholder="Tu nombre" required>
+    
+    <select name="talla" required>
+        <option value="Chica">Chica</option>
+        <option value="Mediana">Mediana</option>
+        <option value="Grande">Grande</option>
+        <option value="ExtraGrande">ExtraGrande</option>
+    </select>
+
+    <textarea name="mensaje" placeholder="Detalles del pedido" required></textarea>
+
+    <!-- Para que no redirija -->
+    <input type="hidden" name="_redirect" value="https://losmuchitos.github.io">
+
+    <!-- Opcional: cambiar el nombre del remitente -->
+    <input type="hidden" name="_subject" value="Nuevo Pedido desde Los Muchitos">
+
+    <button type="submit">Enviar Pedido</button>
+</form>
+
+<div id="confirmacion" style="display:none; color:hotpink; font-weight:bold;">
+  ¡Tu pedido ha sido enviado con éxito!
+</div>
+</section>
         
 
         <section id="carrito">
