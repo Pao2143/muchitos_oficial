@@ -137,17 +137,29 @@ nextBtn.addEventListener('click', () => {
 window.addEventListener('resize', updateCarousel);
 
 document.getElementById("pedido-form").addEventListener("submit", function (event) {
-    event.preventDefault(); // Evita que la página se recargue
+  event.preventDefault(); // Detiene el envío por defecto
 
-    // Mostrar el mensaje de confirmación
-    const confirmacion = document.getElementById("confirmacion");
-    confirmacion.style.display = "block";
+  const form = event.target;
+  const formData = new FormData(form);
 
-    // Limpiar el formulario
-    this.reset();
-
-    // Ocultar el mensaje después de unos segundos
-    setTimeout(() => {
-        confirmacion.style.display = "none";
-    }, 3000); // Oculta el mensaje después de 3 segundos
+  fetch("https://formsubmit.co/el/toboco", {
+    method: "POST",
+    body: formData,
+  })
+  .then(response => {
+    if (response.ok) {
+      // Mostrar mensaje de confirmación
+      document.getElementById("confirmacion").style.display = "block";
+      form.reset();
+      setTimeout(() => {
+        document.getElementById("confirmacion").style.display = "none";
+      }, 3000);
+    } else {
+      alert("Hubo un problema al enviar tu pedido. Inténtalo de nuevo.");
+    }
+  })
+  .catch(error => {
+    console.error("Error al enviar el formulario:", error);
+    alert("Ocurrió un error al enviar el pedido.");
+  });
 });
