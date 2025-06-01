@@ -166,15 +166,14 @@ const checkoutButton = document.getElementById("checkout");
 const pedidoForm = document.getElementById("pedido-form");
 const confirmacion = document.getElementById("confirmacion");
 
-// Mostrar el modal al finalizar la compra
+// Mostrar el modal al hacer clic en "Finalizar Compra"
 checkoutButton.addEventListener("click", () => {
-  if (cartItems.length === 0) {
-    alert("El carrito está vacío.");
-    return;
-  }
-  modal.classList.remove("hidden");
+    if (cartItems.length === 0) {
+        alert("Tu carrito está vacío. Agrega productos antes de continuar.");
+        return;
+    }
+    modal.classList.remove("hidden");
 });
-
 // Cerrar el modal al hacer clic en la X
 closeBtn.addEventListener("click", () => {
   modal.classList.add("hidden");
