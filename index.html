@@ -69,29 +69,29 @@
 
         <section id="formulario">
             
-<form action="https://formsubmit.co/el/toboco" method="POST" id="pedido-form">
-    <input type="text" name="nombre" placeholder="Tu nombre" required>
-    
-    <select name="talla" required>
-        <option value="Chica">Chica</option>
-        <option value="Mediana">Mediana</option>
-        <option value="Grande">Grande</option>
-        <option value="ExtraGrande">ExtraGrande</option>
+<form id="pedido-form" action="https://formsubmit.co/sandrapaolarodriuguez@gmail.com" method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="talla">Tallas:</label>
+    <select id="talla" name="talla" required>
+        <option value="CHICA">Chica</option>
+        <option value="MEDIANA">Mediana</option>
+        <option value="GRANDE">Grande</option>
+        <option value="EXTRAGRANDE">ExtraGrande</option>
     </select>
 
-    <textarea name="mensaje" placeholder="Detalles del pedido" required></textarea>
+    <label for="mensaje">Detalles del pedido:</label>
+    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
 
-    <!-- Para que no redirija -->
-    <input type="hidden" name="_redirect" value="https://losmuchitos.github.io">
-
-    <!-- Opcional: cambiar el nombre del remitente -->
-    <input type="hidden" name="_subject" value="Nuevo Pedido desde Los Muchitos">
+    <!-- Campo oculto para evitar redireccionar y mostrar mensaje personalizado -->
+    <input type="hidden" name="_next" value="https://tu-dominio.github.io/tu-pagina.html">
+    <input type="hidden" name="_captcha" value="false">
 
     <button type="submit">Enviar Pedido</button>
 </form>
-
-<div id="confirmacion" style="display:none; color:hotpink; font-weight:bold;">
-  ¡Tu pedido ha sido enviado con éxito!
+<div id="confirmacion" style="display: none; color: rgb(255, 0, 157); font-weight: bold;">
+    ¡Tu pedido ha sido enviado con éxito!
 </div>
 </section>
         
