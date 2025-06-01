@@ -125,5 +125,35 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Ventana emergente del formulario -->
+<div id="modal-pedido" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2>Enviar Pedido</h2>
+    <form id="pedido-form" action="https://formsubmit.co/sandrapaolarodriuguez@gmail.com" method="POST">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="talla">Talla:</label>
+      <select id="talla" name="talla" required>
+        <option value="CHICA">Chica</option>
+        <option value="MEDIANA">Mediana</option>
+        <option value="GRANDE">Grande</option>
+        <option value="EXTRAGRANDE">ExtraGrande</option>
+      </select>
+
+      <label for="mensaje">Detalles del pedido:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">Enviar Pedido</button>
+    </form>
+    <div id="confirmacion" style="display: none; color: rgb(255, 0, 157); font-weight: bold;">
+      ¡Tu pedido ha sido enviado con éxito!
+    </div>
+  </div>
+</div>
+    
 </body>
 </html>
