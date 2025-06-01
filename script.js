@@ -159,3 +159,43 @@ document.getElementById("pedido-form").addEventListener("submit", function(event
         console.error(error);
     });
 });
+// Obtener elementos del DOM
+const modal = document.getElementById("modal-pedido");
+const closeBtn = document.querySelector(".close-button");
+const checkoutButton = document.getElementById("checkout");
+const pedidoForm = document.getElementById("pedido-form");
+const confirmacion = document.getElementById("confirmacion");
+
+// Mostrar el modal al finalizar la compra
+checkoutButton.addEventListener("click", () => {
+  if (cartItems.length === 0) {
+    alert("El carrito está vacío.");
+    return;
+  }
+  modal.classList.remove("hidden");
+});
+
+// Cerrar el modal al hacer clic en la X
+closeBtn.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
+
+// Enviar el formulario y mostrar mensaje de confirmación
+pedidoForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  // Aquí puedes agregar lógica para enviar los datos del formulario si es necesario
+
+  confirmacion.style.display = "block";
+
+  // Simula el envío con FormSubmit
+  this.submit();
+
+  setTimeout(() => {
+    confirmacion.style.display = "none";
+    modal.classList.add("hidden");
+    this.reset();
+    cartItems.length = 0;
+    updateCart();
+  }, 3000);
+});
