@@ -136,30 +136,26 @@ nextBtn.addEventListener('click', () => {
 // Ajustar el carrusel al redimensionar la ventana
 window.addEventListener('resize', updateCarousel);
 
-document.getElementById("pedido-form").addEventListener("submit", function (event) {
-  event.preventDefault(); // Detiene el envío por defecto
+document.getElementById("pedido-form").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-  const form = event.target;
-  const formData = new FormData(form);
+    const form = event.target;
+    const formData = new FormData(form);
 
-  fetch("https://formsubmit.co/el/toboco", {
-    method: "POST",
-    body: formData,
-  })
-  .then(response => {
-    if (response.ok) {
-      // Mostrar mensaje de confirmación
-      document.getElementById("confirmacion").style.display = "block";
-      form.reset();
-      setTimeout(() => {
-        document.getElementById("confirmacion").style.display = "none";
-      }, 3000);
-    } else {
-      alert("Hubo un problema al enviar tu pedido. Inténtalo de nuevo.");
-    }
-  })
-  .catch(error => {
-    console.error("Error al enviar el formulario:", error);
-    alert("Ocurrió un error al enviar el pedido.");
-  });
+    fetch("https://formsubmit.co/ajax/sandrapaolarodriuguez@gmail.com", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            document.getElementById("confirmacion").style.display = "block";
+            form.reset();
+        } else {
+            alert("Ocurrió un error al enviar el pedido. Intenta de nuevo.");
+        }
+    })
+    .catch(error => {
+        alert("Error de conexión. Intenta más tarde.");
+        console.error(error);
+    });
 });
