@@ -19,6 +19,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -44,6 +45,7 @@ html {
 .menu a:hover {
     text-decoration: underline;
 }
+
 .socials {
     display: flex;
     gap: 1rem;
@@ -51,22 +53,20 @@ html {
 
 .socials a {
     display: inline-block;
+    color: #ff00ae;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-size: 0.9rem;
 }
 
 .social-icon {
-    width: 30px;  /* Ajusta el tamaño según lo necesites */
+    width: 30px;
     height: auto;
     transition: transform 0.3s ease;
 }
 
 .social-icon:hover {
-    transform: scale(1.2); /* Efecto de ampliación al pasar el ratón */
-}
-.socials a {
-    color: #ff00ae;
-    margin-left: 1rem;
-    text-decoration: none;
-    font-size: 0.9rem;
+    transform: scale(1.2);
 }
 
 main {
@@ -129,7 +129,7 @@ h1, h2 {
 }
 
 .add-to-cart:hover {
-    background-color: #ff00ae;
+    background-color: #e0009d;
 }
 
 form {
@@ -163,7 +163,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #ff00ae;
+    background-color: #e0009d;
 }
 
 #carrito {
@@ -175,11 +175,13 @@ form button:hover {
     padding: 10px;
     margin: 10px 0;
 }
+
 .cart-item {
     display: flex;
     justify-content: space-between;
     padding: 5px 0;
 }
+
 footer {
     text-align: center;
     background-color: #ff00ae;
@@ -187,16 +189,20 @@ footer {
     padding: 1rem 0;
     margin-top: 2rem;
 }
+
 #dynamic-logo {
-    width: 200px; /* Ajusta el tamaño según sea necesario */
+    width: 200px;
     height: auto;
     display: block;
-    margin: 0 auto 1rem; /* Centrar y agregar espacio */
-}
-.hidden {
-    display: none;
+    margin: 0 auto 1rem;
 }
 
+.hidden {
+    display: none !important; /* FORZAMOS que realmente se oculte el modal */
+    pointer-events: none;      /* Asegura que no bloquee clics */
+}
+
+/* Método de pago */
 #metodo-pago {
     border: 1px solid #ccc;
     padding: 20px;
@@ -206,37 +212,41 @@ footer {
     background-color: #f9f9f9;
     border-radius: 8px;
 }
+
 /* Estilos del modal */
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    pointer-events: auto;
 }
 
 .modal.hidden {
-  display: none;
+    display: none !important;
+    pointer-events: none;
 }
 
 .modal-content {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  position: relative;
-  width: 90%;
-  max-width: 400px;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    z-index: 1001;
 }
 
 .close-button {
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  cursor: pointer;
-  font-size: 1.5rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
 }
